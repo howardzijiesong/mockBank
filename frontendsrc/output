@@ -1,0 +1,62 @@
+helperfunctions.cc: In function ‘unsigned int readAndCheck(const char*, std::istream&, std::ostream&)’:
+helperfunctions.cc:42:22: error: expected ‘)’ before ‘in’
+                      in, out);
+                      ^
+helperfunctions.cc:42:29: error: no matching function for call to ‘readAndCheck(const char*&, unsigned int, int, std::ostream&)’
+                      in, out);
+                             ^
+helperfunctions.cc:42:29: note: candidates are:
+helperfunctions.cc:39:10: note: unsigned int readAndCheck(const char*, std::istream&, std::ostream&)
+ unsigned readAndCheck(const char* errorMessage, std::istream& in,
+          ^
+helperfunctions.cc:39:10: note:   candidate expects 3 arguments, 4 provided
+In file included from helperfunctions.cc:1:0:
+helperfunctions.h:19:10: note: unsigned int readAndCheck(const char*, unsigned int, std::istream&, std::ostream&)
+ unsigned readAndCheck(const char* errorMessage, unsigned max,
+          ^
+helperfunctions.h:19:10: note:   no known conversion for argument 3 from ‘int’ to ‘std::istream& {aka std::basic_istream<char>&}’
+helperfunctions.h:22:10: note: unsigned int readAndCheck(const char*, unsigned int, unsigned int, std::istream&, std::ostream&)
+ unsigned readAndCheck(const char* errorMessage, unsigned max, unsigned min,
+          ^
+helperfunctions.h:22:10: note:   no known conversion for argument 4 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘std::istream& {aka std::basic_istream<char>&}’
+helperfunctions.cc: In function ‘unsigned int readAndCheck(const char*, unsigned int, std::istream&, std::ostream&)’:
+helperfunctions.cc:47:22: error: expected ‘)’ before ‘in’
+                      in, out);
+                      ^
+helperfunctions.cc:47:29: error: no matching function for call to ‘readAndCheck(const char*&, unsigned int&, int, std::ostream&)’
+                      in, out);
+                             ^
+helperfunctions.cc:47:29: note: candidates are:
+helperfunctions.cc:39:10: note: unsigned int readAndCheck(const char*, std::istream&, std::ostream&)
+ unsigned readAndCheck(const char* errorMessage, std::istream& in,
+          ^
+helperfunctions.cc:39:10: note:   candidate expects 3 arguments, 4 provided
+helperfunctions.cc:44:10: note: unsigned int readAndCheck(const char*, unsigned int, std::istream&, std::ostream&)
+ unsigned readAndCheck(const char* errorMessage, unsigned max, std::istream& in,
+          ^
+helperfunctions.cc:44:10: note:   no known conversion for argument 3 from ‘int’ to ‘std::istream& {aka std::basic_istream<char>&}’
+In file included from helperfunctions.cc:1:0:
+helperfunctions.h:22:10: note: unsigned int readAndCheck(const char*, unsigned int, unsigned int, std::istream&, std::ostream&)
+ unsigned readAndCheck(const char* errorMessage, unsigned max, unsigned min,
+          ^
+helperfunctions.h:22:10: note:   no known conversion for argument 4 from ‘std::ostream {aka std::basic_ostream<char>}’ to ‘std::istream& {aka std::basic_istream<char>&}’
+helperfunctions.cc: At global scope:
+helperfunctions.cc:51:23: error: expected ‘,’ or ‘...’ before ‘std’
+                       std::istream& in, std::ostream& out) {
+                       ^
+helperfunctions.cc: In function ‘unsigned int readAndCheck(const char*, unsigned int, unsigned int)’:
+helperfunctions.cc:60:28: error: ‘in’ was not declared in this scope
+   input = readLineAndStrip(in);
+                            ^
+helperfunctions.cc:63:4: error: ‘out’ was not declared in this scope
+    out << errorMessage << "\n";
+    ^
+helperfunctions.cc: In function ‘unsigned int readAndCheck(const char*, std::istream&, std::ostream&)’:
+helperfunctions.cc:43:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+helperfunctions.cc: In function ‘unsigned int readAndCheck(const char*, unsigned int, std::istream&, std::ostream&)’:
+helperfunctions.cc:48:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [helperfunctions.o] Error 1
